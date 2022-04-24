@@ -1,0 +1,132 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  color: white;
+  background-color: $veryDarkBlue;
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint-up(md) {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+}
+
+h1,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 327px;
+  margin: 0 auto;
+
+  @include breakpoint-up(md) {
+    max-width: 750px;
+  }
+
+  @include breakpoint-up(lg) {
+    max-width: 940px;
+  }
+
+  @include breakpoint-up(xl) {
+    max-width: 1110px;
+  }
+}
+
+.py {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.bg {
+  &-work-back {
+    background-color: $lightRedWork;
+  }
+
+  &-play-back {
+    background-color: $softBlue;
+  }
+
+  &-study-back {
+    background-color: $lightRedStudy;
+  }
+
+  &-exercise-back {
+    background-color: $limeGreen;
+  }
+
+  &-social-back {
+    background-color: $violet;
+  }
+
+  &-self-care-back {
+    background-color: $softOrange;
+  }
+}
+
+.wrapper {
+  @include breakpoint-up(md) {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 20px;
+  }
+}
+
+.frames {
+  @include breakpoint-up(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    // column-gap: 25px;
+    grid-template-areas: "work play study" "exercise social self-care";
+  }
+
+  .work {
+    @include breakpoint-up(md) {
+      grid-area: work;
+    }
+  }
+  .play {
+    @include breakpoint-up(md) {
+      grid-area: play;
+    }
+  }
+
+  .study {
+    @include breakpoint-up(md) {
+      grid-area: study;
+    }
+  }
+
+  .exercise {
+    @include breakpoint-up(md) {
+      grid-area: exercise;
+    }
+  }
+
+  .social {
+    @include breakpoint-up(md) {
+      grid-area: social;
+    }
+  }
+
+  .self-care {
+    @include breakpoint-up(md) {
+      grid-area: self-care;
+    }
+  }
+}

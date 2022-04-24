@@ -1,7 +1,7 @@
 // read data from json and loop frame
 const readData = (timeframe, frames) => {
   frames.innerHTML = ``;
-  fetch("../../data.json")
+  fetch("./data.json")
     .then((res) => res.json())
     .then((dataJson) => {
       dataJson.forEach((item) => {
@@ -43,7 +43,9 @@ const readData = (timeframe, frames) => {
         frames.innerHTML += section;
       });
     })
-    .catch((e) => console.log(e));
+    .catch((err) => {
+      console.log("Error: ", err.message);
+    });
 };
 
 //

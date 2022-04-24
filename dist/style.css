@@ -22,7 +22,13 @@ body {
 @media (min-width: 768px) {
   body {
     height: 100vh;
-    overflow-y: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    height: 100%;
+    position: relative;
   }
 }
 
@@ -87,7 +93,12 @@ h3 {
 
 @media (min-width: 768px) {
   .wrapper {
-    margin-top: 100px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     margin-bottom: 20px;
     display: -ms-grid;
     display: grid;

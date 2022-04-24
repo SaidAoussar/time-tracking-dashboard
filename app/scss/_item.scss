@@ -20,6 +20,11 @@
   padding: 30px 24px;
   border-radius: 15px;
   flex-direction: column;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #34397b;
+  }
 
   @include breakpoint-up(md) {
     padding: 40px 24px;
@@ -68,8 +73,12 @@
 
   &__icon {
     margin-bottom: 5px;
-    img {
+    svg {
       vertical-align: super;
+      cursor: pointer;
+      &:hover path {
+        fill: white;
+      }
     }
   }
 

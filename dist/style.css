@@ -317,6 +317,11 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #34397b;
 }
 
 @media (min-width: 768px) {
@@ -393,8 +398,13 @@ h3 {
   margin-bottom: 5px;
 }
 
-.card__icon img {
+.card__icon svg {
   vertical-align: super;
+  cursor: pointer;
+}
+
+.card__icon svg:hover path {
+  fill: white;
 }
 
 .card__date {

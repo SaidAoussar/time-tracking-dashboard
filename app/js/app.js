@@ -31,9 +31,9 @@ const readData = (timeframe, frames) => {
           item.timeframes[timeframe].current
         }</span>hrs</h1>
         <div class="card__date">
-          Last Week - <span id="lw-work">${
-            item.timeframes[timeframe].previous
-          }</span>hrs
+          Last ${getPreviousPeriod(timeframe)} - <span id="lw-work">${
+          item.timeframes[timeframe].previous
+        }</span>hrs
         </div>
       </div>
     </div>
@@ -45,6 +45,24 @@ const readData = (timeframe, frames) => {
     })
     .catch((e) => console.log(e));
 };
+
+//
+
+function getPreviousPeriod(timeframe) {
+  let period;
+  switch (timeframe) {
+    case "daily":
+      period = "Yesterday";
+      break;
+    case "weekly":
+      period = "Week";
+      break;
+    case "monthly":
+      period = "Month";
+  }
+
+  return period;
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   const frames = document.querySelector(".frames");

@@ -13,7 +13,7 @@ const readData = (timeframe, frames) => {
       .split(" ")
       .join("-")}-back">
       <div
-        style="background-image: url(./../../images/icon-${item.title
+        style="background-image: url(./images/icon-${item.title
           .toLowerCase()
           .split(" ")
           .join("-")}.svg)"

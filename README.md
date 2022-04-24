@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [code](https://your-solution-url.com)
-- Live Site URL: [demo](https://your-live-site-url.com)
+- Solution URL: [code](https://github.com/SaidAoussar/time-tracking-dashboard)
+- Live Site URL: [demo](https://saidaoussar.github.io/time-tracking-dashboard/)
 
 ## My process
 

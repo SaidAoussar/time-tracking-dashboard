@@ -1,0 +1,97 @@
+.item {
+  position: relative;
+  margin-bottom: 20px;
+
+  @include breakpoint-up(md) {
+    margin-bottom: 0;
+    height: 100%;
+  }
+}
+
+.card {
+  position: absolute;
+  left: 0;
+  right: -1px;
+  bottom: -1px;
+  display: flex;
+  background-color: $darkBlue;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 24px;
+  border-radius: 15px;
+  flex-direction: column;
+
+  @include breakpoint-up(md) {
+    padding: 40px 24px;
+  }
+
+  .part-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 12px;
+
+    @include breakpoint-up(md) {
+      margin-bottom: 18px;
+    }
+  }
+
+  .part-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @include breakpoint-up(md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+  }
+
+  &__time {
+    font-size: 24px;
+    font-weight: 300;
+
+    @include breakpoint-up(md) {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 5px;
+    img {
+      vertical-align: super;
+    }
+  }
+
+  &__date {
+    font-size: 16px;
+    font-weight: 300;
+    color: $paleBlue;
+  }
+}
+
+.back-card {
+  border-radius: 15px;
+  padding: 0px 20px 82px;
+
+  @include breakpoint-up(md) {
+    padding-bottom: 144px;
+  }
+
+  div {
+    height: 79px;
+    width: 100%;
+    background-position-x: right;
+    background-position-y: -10px;
+    background-repeat: no-repeat;
+  }
+}

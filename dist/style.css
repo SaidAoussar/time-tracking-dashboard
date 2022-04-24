@@ -27,6 +27,7 @@ body {
 }
 
 h1,
+h2,
 h3 {
   margin: 0;
   padding: 0;
@@ -359,6 +360,7 @@ h3 {
 }
 
 .card__title {
+  font-size: 18.72px;
   font-weight: 400;
   text-transform: capitalize;
   margin-bottom: 5px;

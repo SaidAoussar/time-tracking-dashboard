@@ -21,17 +21,17 @@ const readData = (timeframe, frames) => {
     </div>
     <div class="card">
       <div class="part-one">
-        <h3 class="card__title">${item.title}</h3>
+        <h1 class="card__title">${item.title}</h1>
         <div class="card__icon">
           <img src="./images/icon-ellipsis.svg" alt="ellipsis" />
         </div>
       </div>
       <div class="part-two">
-        <h1 class="card__time"><span id="work-hrs">${
+        <h2 class="card__time"><span>${
           item.timeframes[timeframe].current
-        }</span>hrs</h1>
+        }</span>hrs</h2>
         <div class="card__date">
-          Last ${getPreviousPeriod(timeframe)} - <span id="lw-work">${
+          Last ${getPreviousPeriod(timeframe)} - <span>${
           item.timeframes[timeframe].previous
         }</span>hrs
         </div>
